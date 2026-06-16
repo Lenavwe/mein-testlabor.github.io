@@ -640,6 +640,18 @@
       will-change: transform;
     }
 
+    /* Desktop: center cards, no scroll needed */
+    @media (min-width: 769px) {
+      .slider-viewport { overflow: visible; }
+      .slider-track {
+        justify-content: center;
+        flex-wrap: wrap;
+        transform: none !important;
+        padding: 0 6vw var(--s2);
+      }
+      .slider-controls { display: none; }
+    }
+
     .event-card {
       flex: 0 0 calc(min(340px, 82vw));
       display: flex;
